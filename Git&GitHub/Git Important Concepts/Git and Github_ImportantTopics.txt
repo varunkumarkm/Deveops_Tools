@@ -1,0 +1,122 @@
+Git and Github 
+--------------
+
+What is Git? and why we use git
+-> * Git is a popular source controller
+   * Distributed system
+   * Free and open-source
+* Git is a repository, where we commit our objects
+* This is for control to track and maintain the developer changes
+* So, Git is version control system
+* Meaning of version control is managing of our source codes
+* It can help us for mulitple users can work together and we can handle the larger projects efficienty using git and github
+
+Differance of git and github
+Git    -> Git is for managing our repository in locally
+Github -> We using Github create a centralized repository or remote repository 
+
+some linux commands are:
+* check the present working directory pwd 
+use (pwd) command ex: it shows /c/Users/varunkm
+* us (ls) command list all our data
+* (git --version) it will display git version
+Configure our username and email
+* git config --global user.name "varun kumar"
+* git config --global user.email varunkumarkm44@gmail.com
+
+* git init: it is initialize a git repository 
+
+* git status
+
+* git add . or git add filename 
+
+* git commit -m "initial commit" add the commit message
+
+* we want to check which user is configure and which email and username used
+  git config --list
+
+* we want to check the user name
+  git config --global user.name
+
+* same way we want to check email
+  git config --global user.email
+
+* Once we add the, we need to remove the staging
+  git restore --staged file name
+
+* we want to open the folder in vscode
+  code .
+
+* How to add a new commit message
+  git commit --named -m ""
+
+* we can check the logs of our commit
+  git log
+
+* we want to check the oneline log
+  git log --oneline
+  For every commit one id is created
+
+* Commiting a modified file (This command is only work for when we modified the file)it's adding all the files which we modified
+  git commit -a -m "file name"
+
+* it's showing a differance of modified file and commited file, showing what new things are added
+  git diff 
+  after git add . use this command, the check git diff its not showing anything
+  after we check using this command (git diff --staged) 
+
+* If we want to create a new file we use this command
+  touch file name ex: testing.html
+
+*Sometimes we working we don't want to added our local repository 
+ we create one file (.gitignore) on our IDE 
+ after we specify a file name which we not add to stage, then that file is not showing to commit
+ we can write any number of log file on .gitignore file we use on more command *.log
+ when we not adding a any specified name we ude /filename
+
+* How we delete our local repository
+  rm -rf .git
+
+* Remove file for the IDE
+  rm filename
+
+* We want to remove the commited file
+  git rm file name
+
+* We want to rename the file name
+  git mv initialname newname
+------------------------------------------------------------------------------------------------------------------------
+Branches:
+--------
+
+* why we created the branches
+  Because when we working on the project multiple people can working, All people is not working on the master branch
+  what we can do, we create a new branch form the existing version then the person can work on that branch and then
+  if the task is completed it can be merge with the master branch.
+  * For the each people can working different branches, and whenever the task is completed then finally merge with the master branch
+
+* We check the how many branches are there 
+  git branch
+
+* How to create a branch
+  git branch branchname
+  ex: git branch development
+
+* How we switch to the development branch
+  git checkout development
+  * git checkout command is used to switch the one branch to another
+
+* I wanted to merge with master branch to our development branch
+  git merge development  (But current branch is master)
+* Merge all the development files, we come out to initial page use escape and :wq
+
+* Another way to create a branch name 
+  git checkout -b testing
+  Instead of we using two commands here we use only one command
+
+* We need to check how many branches are merged on master branch
+  git branch --merged
+
+* we need to check not merged branches
+  git branch --no-merged
+  
